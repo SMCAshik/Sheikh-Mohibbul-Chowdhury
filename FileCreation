@@ -1,0 +1,27 @@
+package file;
+import java.io.*;
+
+public class fileCreation {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		File myfile = new File("file1.txt");
+		if(myfile.createNewFile()) {
+			System.out.println("File created and file name is :"+myfile.getName());
+
+	}else {
+		
+		System.out.println("File already exists");
+	}
+		
+		if(myfile.exists()) {
+			System.out.println("File name : "+ myfile.getName());
+			System.out.println("Path of the file :"+ myfile.getAbsolutePath());
+			System.out.println("writable?"+ myfile.canWrite());
+			System.out.println("Readable?"+ myfile.canRead());
+			System.out.println("Size of the file :"+ myfile.length()+"Bytes");
+		}
+		
+
+}
+}
